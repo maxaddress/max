@@ -1,0 +1,22 @@
+---
+
+- name: Configs gerais
+
+  hosts: roteadores
+
+  tasks:
+
+  - name: Adicionar banner
+
+    ios_banner:
+      banner: login
+      text: |
+        Somente Acesso Autorizado!
+        Max Address Networks
+      state: present
+
+  - name: Adicionar loopback
+
+    ios_interface:
+      name: Loopback21
+      state: present
