@@ -5,7 +5,7 @@ HOST = "192.168.122.71" # variável recebe endereço IP do R1
 user = input("Enter your telnet Username: ") # customizando o texto padrão (opcional)  
 password = getpass.getpass()
 
-tn = telnetlib.Telnet(HOST) # usando a bilioteca telnetlib para "telnetting" o IP contido em "HOST"
+tn = telnetlib.Telnet(HOST) # usando a biblioteca telnetlib para "telnetting" o IP contido em "HOST"
 
 tn.read_until(b"Username: ") # mudar do padrão "login" para "Username"
 tn.write(user.encode('ascii') + b"\n") # insere o usuário digitado na variável "user" 
